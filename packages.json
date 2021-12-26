@@ -1,0 +1,35 @@
+{
+	"name": "spotify-search-tag-parser",
+	"version": "1.0.0",
+	"description": "Parse Spotify search tags",
+	"license": "MIT",
+	"repository": "thiagorizzo/spotify-search-tag-parser",
+	"author": {
+		"name": "Thiago Luiz Parrillo Rizzo",
+		"email": "thiagorizzo@gmail.com"
+	},
+	"type": "module",
+	"exports": "./index.js",
+	"engines": {
+		"node": "^12.20.0 || ^14.13.1 || >=16.0.0"
+	},
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"github",
+		"release",
+		"releases",
+		"new",
+		"generate",
+		"url",
+		"query",
+		"search",
+		"parameters",
+		"params",
+        "spotify",
+        "tag",
+        "tags",
+        "parser"
+	]
+}
