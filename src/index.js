@@ -1,5 +1,9 @@
 'use strict';
 
+// valid examples OF albumText
+// artist: edge of sanity album: purgatory afterglow
+// artist: edge of sanity; purgatory afterglow
+
 const spotifySearchTags = {
     ARTIST = 'artist',
     ALBUM = 'album',
@@ -14,9 +18,6 @@ const spotifySearchTags = {
 SpotifySearchTagParser.prototype = {
 
     getSpotifySearchTagMatch: function(albumText, spotifySearchTag) {
-        // valid examples
-        // artist: edge of sanity album: purgatory afterglow
-        // artist: edge of sanity; purgatory afterglow
         let tagsSpotifyRegex = new RegExp(`(?<tag>(${spotifySearchTag}:))(\s+?)?(?<tagValue>.*?)(?=artist:|album:|track:|label:|isrc:|upc:|year:|tag:|;|\n|$)`, "g");
 
         let matchesFound = [];
