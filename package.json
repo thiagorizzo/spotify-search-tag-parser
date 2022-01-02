@@ -1,6 +1,6 @@
 {
   "name": "spotify-search-tag-parser",
-  "version": "1.0.0-beta.5",
+  "version": "1.0.0-beta.6",
   "description": "Parse Spotify search tags",
   "license": "MIT",
   "repository": "https://github.com/thiagorizzo/spotify-search-tag-parser.git",
@@ -16,6 +16,9 @@
   "files": [
     "src/index.js"
   ],
+  "scripts": {
+    "test": "jest"
+  },
   "keywords": [
     "github",
     "release",
@@ -31,5 +34,8 @@
     "tag",
     "tags",
     "parser"
-  ]
+  ],
+  "devDependencies": {
+    "jest": "^27.4.5"
+  }
 }

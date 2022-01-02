@@ -15,6 +15,8 @@ const spotifySearchTags = {
     TAG: 'tag'
 }
 
+function SpotifySearchTagParser() { }
+
 SpotifySearchTagParser.prototype = {
 
     getSpotifySearchTagMatch: function(albumText, spotifySearchTag) {
@@ -32,15 +34,14 @@ SpotifySearchTagParser.prototype = {
 
             match = tagsSpotifyRegex.exec(albumText);
         }    
-        
+
         return matchesFound;
     },
 
     getSpotifySearchTagMatches: function(albumText) {
         const spotifySearchTagMatches = [];
 
-        for (const spotifySearchTag in SpotifySearchTag) {
-            let tagValue = Object.values(SpotifySearchTag).filter(t => t === spotifySearchTag.toLowerCase())[0];
+        for (const [_, tagValue] of Object.entries(spotifySearchTags)) {
             let matchesFound = this.getSpotifySearchTagMatch(albumText, tagValue);
             if (matchesFound.length > 0) {
                 spotifySearchTagMatches.push(...matchesFound);
@@ -53,13 +54,11 @@ SpotifySearchTagParser.prototype = {
     removeSpotifySearchTag: function(albumText, spotifySearchTag) {
         let matchesFound = this.getSpotifySearchTagMatch(albumText, spotifySearchTag);
 
-        let result = '';
-
         matchesFound.forEach(m => {
             albumText = albumText.replace(m.text, m.tagValue + ' ');
         });
         
-        return result.trim();
+        return albumText.trim();
     },
     
     removeSpotifySearchTags: function(albumText, onlyKeepTags = undefined) {
@@ -79,3 +78,4 @@ SpotifySearchTagParser.prototype = {
 }
 
 module.exports = SpotifySearchTagParser;
+module.exports.spotifySearchTags = spotifySearchTags;
