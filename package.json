@@ -1,6 +1,6 @@
 {
   "name": "spotify-search-tag-parser",
-  "version": "1.0.0-beta.4",
+  "version": "1.0.0-beta.5",
   "description": "Parse Spotify search tags",
   "license": "MIT",
   "repository": "https://github.com/thiagorizzo/spotify-search-tag-parser.git",

@@ -5,14 +5,14 @@
 // artist: edge of sanity; purgatory afterglow
 
 const spotifySearchTags = {
-    ARTIST = 'artist',
-    ALBUM = 'album',
-    TRACK = 'track',
-    LABEL = 'label',
-    ISRC = 'isrc',
-    UPC = 'upc',
-    YEAR = 'year',
-    TAG = 'tag'
+    ARTIST: 'artist',
+    ALBUM: 'album',
+    TRACK: 'track',
+    LABEL: 'label',
+    ISRC: 'isrc',
+    UPC: 'upc',
+    YEAR: 'year',
+    TAG: 'tag'
 }
 
 SpotifySearchTagParser.prototype = {
