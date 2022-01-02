@@ -1,9 +1,5 @@
 'use strict';
 
-// valid examples OF albumText
-// artist: edge of sanity album: purgatory afterglow
-// artist: edge of sanity; purgatory afterglow
-
 const spotifySearchTags = {
     ARTIST: 'artist',
     ALBUM: 'album',
@@ -48,6 +44,7 @@ SpotifySearchTagParser.prototype = {
             }
         }
 
+        console.log(spotifySearchTagMatches);
         return spotifySearchTagMatches;
     },
 
