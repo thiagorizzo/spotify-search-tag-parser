@@ -1,6 +1,6 @@
 {
   "name": "spotify-search-tag-parser",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Parse Spotify search tags",
   "license": "MIT",
   "repository": "https://github.com/thiagorizzo/spotify-search-tag-parser.git",
@@ -10,6 +10,7 @@
   },
   "type": "module",
   "main": "src/index.js",
+  "exports": "./src/index.js",
   "engines": {
     "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
   },
