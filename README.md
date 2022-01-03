@@ -2,6 +2,8 @@
 
 This is a Spotify search tag parser. It does extract or remove search tags from a text.
 
+[![NPM](https://nodei.co/npm/spotify-search-tag-parser.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/spotify-search-tag-parser/
+
 ## Table of contents
 
 - [Features](#features)
