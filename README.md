@@ -4,9 +4,9 @@ This is a Spotify search tag parser. It does extract or remove search tags from 
 
 ## Table of contents
 
-* [Features](#features)
-* [Installation](#installation)
-* [Usage](#usage)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
 
 ## Features
 
@@ -19,12 +19,13 @@ The library includes functions to do the following:
 
     $ npm install spotify-search-tag-parser --save
 
-## Usage
+## Use with ES6 modules
 
 First, instantiate.
 
 ```javascript
-var SpotifySearchTagParser = require('spotify-search-tag-parser');
+import SpotifySearchTagParser from "spotify-search-tag-parser";
+
 var spotifySearchTagParser = new SpotifySearchTagParser();
 ```
 
@@ -33,21 +34,21 @@ Lastly, use the `spotifySearchTagParser` object's methods to remove or extract s
 ```javascript
 // remove artist tag from text
 let result = spotifySearchTagParser.removeSpotifySearchTag(
-    "album: inhale/exhale artist: nasum",
-    SpotifySearchTagParser.spotifySearchTags.ARTIST
+  "album: inhale/exhale artist: nasum",
+  SpotifySearchTagParser.spotifySearchTags.ARTIST
 );
 ```
 
 ### Spotify Search Tags
 
- - artist
- - album
- - track
- - label
- - isrc
- - upc
- - year
- - tag
+- artist
+- album
+- track
+- label
+- isrc
+- upc
+- year
+- tag
 
 ### Separator
 
@@ -62,13 +63,13 @@ When extracting search tags the parser gonna return:
 
 - `text`: matched text
 - `tagValue`: matched tag value in text
-- `tag`: matched tag type 
+- `tag`: matched tag type
 
 Example:
 
 ```javascript
 var result = spotifySearchTagParser.getSpotifySearchTagMatches(
-    "album:inhale/exhale artist:nasum year:1998"
+  "album:inhale/exhale artist:nasum year:1998"
 );
 ```
 
@@ -76,30 +77,30 @@ Result:
 
 ```javascript
 [
-    { 
-        text: 'artist:nasum ',
-        tagValue: 'nasum',
-        tag: 'artist'
-    },
-    {
-        text: 'album:inhale/exhale ',
-        tagValue: 'inhale/exhale',
-        tag: 'album'
-    },
-    {
-        text: 'year:1998',
-        tagValue: '1998',
-        tag: 'year'
-    }
-]
-``` 
+  {
+    text: "artist:nasum ",
+    tagValue: "nasum",
+    tag: "artist",
+  },
+  {
+    text: "album:inhale/exhale ",
+    tagValue: "inhale/exhale",
+    tag: "album",
+  },
+  {
+    text: "year:1998",
+    tagValue: "1998",
+    tag: "year",
+  },
+];
+```
 
-### Functions 
+### Functions
 
 Below are examples for all functions.
 
 ```javascript
-var SpotifySearchTagParser = require('spotify-search-tag-parser');
+var SpotifySearchTagParser = require("spotify-search-tag-parser");
 var spotifySearchTagParser = new SpotifySearchTagParser();
 
 /**
@@ -108,29 +109,27 @@ var spotifySearchTagParser = new SpotifySearchTagParser();
 
 // Remove specific tag, album one
 var result = spotifySearchTagParser.removeSpotifySearchTag(
-    "album: inhale/exhale ; nasum",
-    SpotifySearchTagParser.spotifySearchTags.ALBUM
+  "album: inhale/exhale ; nasum",
+  SpotifySearchTagParser.spotifySearchTags.ALBUM
 );
 
 // Remove every tag
 var result = spotifySearchTagParser.removeSpotifySearchTags(
-    "artist: nasum album:inhale/exhale year:1998"
+  "artist: nasum album:inhale/exhale year:1998"
 );
 
 /**
  * Extract Tag Functions
  */
 
-// Extract only one tag 
+// Extract only one tag
 var result = spotifySearchTagParser.getSpotifySearchTagMatch(
-    "album:inhale/exhale artist:nasum year:1998",
-    SpotifySearchTagParser.spotifySearchTags.ARTIST
+  "album:inhale/exhale artist:nasum year:1998",
+  SpotifySearchTagParser.spotifySearchTags.ARTIST
 );
 
-
-// Extract every tag 
+// Extract every tag
 var result = spotifySearchTagParser.getSpotifySearchTagMatches(
-    "album:inhale/exhale artist:nasum year:1998"
+  "album:inhale/exhale artist:nasum year:1998"
 );
-
 ```
