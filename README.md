@@ -21,12 +21,12 @@ The library includes functions to do the following:
 
     $ npm install spotify-search-tag-parser --save
 
-## Use with ES6 modules
+## Usage
 
 First, instantiate.
 
 ```javascript
-import SpotifySearchTagParser from "spotify-search-tag-parser";
+var SpotifySearchTagParser = require("spotify-search-tag-parser");
 
 var spotifySearchTagParser = new SpotifySearchTagParser();
 ```
